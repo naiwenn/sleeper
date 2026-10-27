@@ -632,8 +632,6 @@ def get_stationary_indicator(
     data: pd.DataFrame, window: str = '10s', stdtol: float = 15 / 1000
 ) -> pd.Series:
     """
-    Taken from Actipy
-
     Return a boolean pandas.Series indicating stationary (low movement) periods.
 
     :param data: A pandas.DataFrame of acceleration time-series. It must contain
