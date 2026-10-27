@@ -566,8 +566,9 @@ def setup_transforms(augment_mode: str, is_train: bool) -> Callable[[Tensor], Te
 
 
 ##########################################################################
-#                        Taken from Actipy. Need to update if actipy changes.
-# https://github.com/OxWearables/actipy/blob/5ca689a1bca1a338712a5e8b9831eaf9e20d95d9/src/actipy/processing.py#L97
+#
+#                                    Non-wear detection
+#
 ##########################################################################
 def get_wear_time(t: pd.Series, tol: float = 0.1) -> Tuple[float, int]:
     """ Return wear time in seconds and number of interrupts. """
