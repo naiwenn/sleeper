@@ -1,7 +1,7 @@
 include tox.ini
 include hubconf.py
 include constraints/*.txt
-include GLOSSARY.md LICENSE.md README.md RELEASING.md
+include GLOSSARY.md LICENSE NOTICE README.md RELEASING.md
 recursive-include tests *.py
 recursive-include assets *.graffle *.jpg *.lzma
 recursive-include src *.yaml

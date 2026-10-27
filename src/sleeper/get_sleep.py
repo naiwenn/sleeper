@@ -30,7 +30,7 @@ How to run the script:
 
 ```bash
 python src/sleeper/get_sleep.py data/test.bin -m 22
--w /Users/hangy/Dphil/code/sleeper/bi_sleepnet.mdl -l /Users/hangy/Dphil/code/sleeper
+-w path/to/bi_sleepnet.mdl -l path/to/model_dir
 
 python src/sleeper/get_sleep.py data/sample.cwa.gz -m 22
 

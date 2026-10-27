@@ -8,7 +8,7 @@ The key features of this package are as follows:
 * Sleep architecture metric estimation including rapid - eye - movement(REM) / NREM sleep duration.
 
 
-![](https://raw.githubusercontent.com/OxWearables/asleep/main/assets/figure.jpg)
+![](assets/figure.jpg)
 
 
 # Dependencies
@@ -105,25 +105,8 @@ time, x, y, z
 ```
 
 
-# Citation
-If you want to use our package for your project, please cite our paper below:
-```bibtex
-@article{yuan2024self,
-  title={Self-supervised learning of accelerometer data provides new insights for sleep and its association with mortality},
-  author={Yuan, Hang and Plekhanova, Tatiana and Walmsley, Rosemary and Reynolds, Amy C and Maddison, Kathleen J and Bucan, Maja and Gehrman, Philip and Rowlands, Alex and Ray, David W and Bennett, Derrick and others},
-  journal={NPJ digital medicine},
-  volume={7},
-  number={1},
-  pages={86},
-  year={2024},
-  publisher={Nature Publishing Group UK London}
-}
-```
-
-# Acknowledgements
-We would like to thank all our code contributors, manuscript co - authors, and research participants for their help in making this work possible. The
-data processing pipeline of this repository is based on the [step_count](https://github.com/OxWearables/stepcount) package from our group. Special
-thanks to @chanshing for his help in developing the package.
+# License
+This project is released into the public domain under the [Unlicense](LICENSE). See [NOTICE](NOTICE) for third-party notices.
 
 # Maintainer documentation
 

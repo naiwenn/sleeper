@@ -43,7 +43,7 @@ requires-python = ">=3.8"
 # This is either text indicating the license for the distribution, or a file
 # that contains the license
 # https://packaging.python.org/en/latest/specifications/core-metadata/#license
-license = {file = "LICENSE.md"}
+license = {file = "LICENSE"}
 
 # Allow for the entry points to be dynamic and configurable
 dynamic = ["scripts"]  # Optional
@@ -60,14 +60,14 @@ keywords = ["sleep", "wearables", "machine learning"]  # Optional
 # authored the project, and a valid email address corresponding to the name
 # listed.
 authors = [
-  {name = "Hang Yuan", email = "angerhangy@gmail.com" } # Optional
+  {name = "Naiwenn", email = "naiwenn12@gmail.com" } # Optional
 ]
 
 # This should be your name or the names of the organization who currently
 # maintains the project, and a valid email address corresponding to the name
 # listed.
 maintainers = [
-  {name = "Hang Yuan", email = "angerhangy@gmail.com" } # Optional
+  {name = "Naiwenn", email = "naiwenn12@gmail.com" } # Optional
 ]
 
 # Classifiers help users find your project by categorizing it.
@@ -89,7 +89,7 @@ classifiers = [  # Optional
   "Topic :: Scientific/Engineering :: Medical Science Apps.",
 
   # Pick your license as you wish
-  "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: The Unlicense (Unlicense)",
 
   # Specify the Python versions you support here. In particular, ensure
   # that you indicate you support Python 3. These classifiers are *not*
@@ -151,9 +151,9 @@ test = ["coverage"]
 # maintainers, and where to support the project financially. The key is
 # what's used to render the link text on PyPI.
 [project.urls]  # Optional
-"Homepage" = "https://github.com/OxWearables/asleep"
-"Bug Reports" = "https://github.com/OxWearables/asleep/issues"
-"Source" = "https://github.com/OxWearables/asleep"
+"Homepage" = "https://github.com/naiwenn/asleep-main"
+"Bug Reports" = "https://github.com/naiwenn/asleep-main/issues"
+"Source" = "https://github.com/naiwenn/asleep-main"
 
 # The following would provide a command line executable called `sample`
 # which executes the function `main` from this package when invoked.
