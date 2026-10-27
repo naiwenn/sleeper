@@ -1,4 +1,4 @@
-# Releasing asleep
+# Releasing sleeper
 
 Releases are published to PyPI by `.github/workflows/release.yml` when a GitHub
 Release is published. Prepare releases from a clean checkout of `main`.

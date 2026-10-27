@@ -3,8 +3,8 @@ from __future__ import annotations
 from typing import Any, Tuple
 
 import joblib
-from asleep.utils import resize
-from asleep.models import SleepWindowSSL
+from sleeper.utils import resize
+from sleeper.models import SleepWindowSSL
 import os
 import numpy as np
 from numpy.typing import NDArray

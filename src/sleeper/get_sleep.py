@@ -19,20 +19,20 @@ import datetime
 
 import torch
 
-import asleep.sleep_windows as sw
-from asleep.utils import data_long2wide, read, NpEncoder
-from asleep.sleepnet import start_sleep_net
-from asleep.macros import SLEEPNET_LABELS, SLEEPNET_BINARY_LABELS, SLEEPNET_THRE_CLASS_LABELS
-from asleep.summary import generate_sleep_parameters, summarize_daily_sleep
+import sleeper.sleep_windows as sw
+from sleeper.utils import data_long2wide, read, NpEncoder
+from sleeper.sleepnet import start_sleep_net
+from sleeper.macros import SLEEPNET_LABELS, SLEEPNET_BINARY_LABELS, SLEEPNET_THRE_CLASS_LABELS
+from sleeper.summary import generate_sleep_parameters, summarize_daily_sleep
 
 """
 How to run the script:
 
 ```bash
-python src/asleep/get_sleep.py data/test.bin -m 22
--w /Users/hangy/Dphil/code/asleep/bi_sleepnet.mdl -l /Users/hangy/Dphil/code/asleep
+python src/sleeper/get_sleep.py data/test.bin -m 22
+-w /Users/hangy/Dphil/code/sleeper/bi_sleepnet.mdl -l /Users/hangy/Dphil/code/sleeper
 
-python src/asleep/get_sleep.py data/sample.cwa.gz -m 22
+python src/sleeper/get_sleep.py data/sample.cwa.gz -m 22
 
 ```
 
@@ -110,7 +110,7 @@ def get_parsed_data(
         with open(info_data_path, 'r') as f:
             info = json.load(f)
 
-    info['AsleepVersion'] = version('asleep')
+    info['SleeperVersion'] = version('sleeper')
     with open(info_data_path, 'w', encoding='utf-8') as f:
         json.dump(info, f, ensure_ascii=False, indent=4, cls=NpEncoder)
     print("Info data file saved to: {}".format(info_data_path))
@@ -263,7 +263,7 @@ def get_sleep_windows(
 
 def download_models(force_download: bool = False) -> None:
     """Download all required model files without processing any data."""
-    import asleep.sslmodel as sslmodel
+    import sleeper.sslmodel as sslmodel
 
     # 1. SSL sleep-window detector weights (ssl.joblib.lzma)
     model_path = os.path.join(pathlib.Path(__file__).parent, "ssl.joblib.lzma")
@@ -282,7 +282,7 @@ def download_models(force_download: bool = False) -> None:
     print("Caching ssl-wearables repository...")
     sslmodel.get_sslnet(tag='v1.0.0', pretrained=False)
 
-    # 3. asleep repo + SleepNet CNN-LSTM weights via torch.hub
+    # 3. sleeper repo + SleepNet CNN-LSTM weights via torch.hub
     #    torch.hub.set_dir was set in step 2, so repo + weights land in torch_hub_cache/
     #    Parameters must match the pretrained weights (config_eval: cnn_lstm_eval + deployment)
     print("Caching SleepNet repository and weights...")
@@ -318,7 +318,7 @@ def main() -> None:
     parser.add_argument(
         "--force_run",
         action="store_true",
-        help="asleep package won't rerun the analysis to save "
+        help="sleeper package won't rerun the analysis to save "
              "time. force_run will make sure everything is "
              "regenerated")
     parser.add_argument(

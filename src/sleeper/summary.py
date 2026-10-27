@@ -3,7 +3,7 @@ from __future__ import annotations
 from os import PathLike
 from typing import Any, Dict, Sequence, Union, cast
 
-from asleep.sleep_stats import get_all_sleep_paras, get_stage_durations
+from sleeper.sleep_stats import get_all_sleep_paras, get_stage_durations
 import numpy as np
 from numpy.typing import NDArray
 import pandas as pd

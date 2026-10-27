@@ -5,8 +5,8 @@ import numpy as np
 from numpy.typing import NDArray
 import pytest
 
-import asleep.get_sleep as get_sleep
-import asleep.models as models
+import sleeper.get_sleep as get_sleep
+import sleeper.models as models
 
 
 class StopTest(Exception):
@@ -23,7 +23,7 @@ def test_sleep_window_predict_passes_num_workers(
     detector.batch_size = 2
 
     monkeypatch.setattr(
-        "asleep.models.sslmodel.NormalDataset", lambda *args, **kwargs: object()
+        "sleeper.models.sslmodel.NormalDataset", lambda *args, **kwargs: object()
     )
 
     def capture_loader(*args: object, **kwargs: object) -> None:
@@ -52,7 +52,7 @@ def test_sleep_window_fit_passes_num_workers_to_both_loaders(
 
     monkeypatch.setattr(models, "GroupShuffleSplit", lambda *args, **kwargs: Splitter())
     monkeypatch.setattr(
-        "asleep.models.sslmodel.NormalDataset", lambda *args, **kwargs: object()
+        "sleeper.models.sslmodel.NormalDataset", lambda *args, **kwargs: object()
     )
 
     def capture_loader(*args: object, **kwargs: object) -> object:
@@ -94,7 +94,7 @@ def test_get_sleep_windows_forwards_cli_num_workers(
     def stop_after_prediction(*args: object, **kwargs: object) -> None:
         raise StopTest
 
-    monkeypatch.setattr("asleep.get_sleep.np.save", stop_after_prediction)
+    monkeypatch.setattr("sleeper.get_sleep.np.save", stop_after_prediction)
 
     with pytest.raises(StopTest):
         get_sleep.get_sleep_windows(

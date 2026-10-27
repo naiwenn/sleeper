@@ -15,7 +15,7 @@ from torchvision import transforms
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
 from torch.optim.adam import Adam
-from asleep.utils import EarlyStopping, RandomSwitchAxis, RotationAxis
+from sleeper.utils import EarlyStopping, RandomSwitchAxis, RotationAxis
 
 
 verbose = False

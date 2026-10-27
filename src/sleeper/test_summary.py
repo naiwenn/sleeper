@@ -6,7 +6,7 @@ import os
 import numpy as np
 import pandas as pd
 
-from asleep.summary import generate_sleep_parameters, summarize_daily_sleep
+from sleeper.summary import generate_sleep_parameters, summarize_daily_sleep
 
 
 def main() -> None:

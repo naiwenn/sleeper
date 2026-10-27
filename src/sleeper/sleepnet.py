@@ -13,7 +13,7 @@ import os.path
 
 
 # Model utils
-from asleep.utils import cnnLSTMInFerDataset, cnn_lstm_infer_collate, \
+from sleeper.utils import cnnLSTMInFerDataset, cnn_lstm_infer_collate, \
     prepare_infer_data_cnnlstm, setup_transforms
 
 # Torch

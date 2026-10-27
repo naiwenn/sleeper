@@ -194,7 +194,7 @@ def convert_ordereddict(value: Any) -> Any:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Collate asleep output files from multiple runs into single CSV files",
+        description="Collate sleeper output files from multiple runs into single CSV files",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""Available file types:
   info        - Device and recording metadata (info.json)

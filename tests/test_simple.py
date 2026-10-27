@@ -7,7 +7,7 @@ import unittest
 
 import numpy as np
 
-from asleep.simple import add_one
+from sleeper.simple import add_one
 
 
 class TestSimple(unittest.TestCase):
@@ -20,7 +20,7 @@ class TestSimple(unittest.TestCase):
             np.lib.NumpyVersion(np.__version__),
             np.lib.NumpyVersion("1.24.0"),
         )
-        importlib.import_module("asleep.get_sleep")
+        importlib.import_module("sleeper.get_sleep")
 
 
 if __name__ == '__main__':

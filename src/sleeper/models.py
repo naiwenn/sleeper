@@ -16,8 +16,8 @@ import torch.nn.functional as F
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from torch.autograd import Variable
 
-import asleep.sslmodel as sslmodel
-from asleep.utils import get_inverse_class_weights
+import sleeper.sslmodel as sslmodel
+from sleeper.utils import get_inverse_class_weights
 
 Array = NDArray[Any]
 Device = Union[str, torch.device]

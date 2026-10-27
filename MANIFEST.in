@@ -5,5 +5,5 @@ include GLOSSARY.md LICENSE.md README.md RELEASING.md
 recursive-include tests *.py
 recursive-include assets *.graffle *.jpg *.lzma
 recursive-include src *.yaml
-exclude src/asleep/models *.mdl
-recursive-exclude src/asleep/torch_hub_cache *
+exclude src/sleeper/models *.mdl
+recursive-exclude src/sleeper/torch_hub_cache *

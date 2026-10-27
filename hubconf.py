@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Union
 
-from asleep.models import CNNLSTM, weight_init
+from sleeper.models import CNNLSTM, weight_init
 import torch
 
 dependencies = ["torch"]

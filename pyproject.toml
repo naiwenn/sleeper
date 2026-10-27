@@ -10,7 +10,7 @@
 # There are some restrictions on what makes a valid project name
 # specification here:
 # https://packaging.python.org/specifications/core-metadata/#name
-name = "asleep"  # Required
+name = "sleeper"  # Required
 
 # Versions should comply with PEP 440:
 # https://www.python.org/dev/peps/pep-0440/
@@ -158,7 +158,7 @@ test = ["coverage"]
 # The following would provide a command line executable called `sample`
 # which executes the function `main` from this package when invoked.
 #[project.scripts]  # Optional
-#get_sleep = "asleep:get_sleep"
+#get_sleep = "sleeper:get_sleep"
 
 # This is configuration specific to the `setuptools` build backend.
 # If you are using a different build backend, you will need to change this.
@@ -168,7 +168,7 @@ test = ["coverage"]
 #package-data = {"sample" = ["*.dat"]}
 
 [tool.setuptools.package-data]
-asleep = ["py.typed"]
+sleeper = ["py.typed"]
 
 [build-system]
 # These are the assumed default build requirements from pip:
@@ -184,7 +184,7 @@ preview = true
 extend-exclude = [
   "*.egg",
   "data",
-  "src/asleep/torch_hub_cache",
+  "src/sleeper/torch_hub_cache",
   "venv",
 ]
 
@@ -194,8 +194,8 @@ ignore = ["E402"]
 
 [tool.mypy]
 python_version = "3.8"
-files = ["src/asleep", "tests", "hubconf.py"]
-exclude = ["^src/asleep/torch_hub_cache/"]
+files = ["src/sleeper", "tests", "hubconf.py"]
+exclude = ["^src/sleeper/torch_hub_cache/"]
 mypy_path = "src"
 explicit_package_bases = true
 strict = true

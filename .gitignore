@@ -15,11 +15,11 @@ outputs
 .tox
 .cache
 
-src/asleep/torch_hub_cache
+src/sleeper/torch_hub_cache
 assets/*.joblib.*
 *.ipynb_checkpoints
 *.ipynb
-src/asleep/models
+src/sleeper/models
 *mdl
 *.lzma
 # archives redondantes

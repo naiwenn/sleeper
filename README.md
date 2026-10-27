@@ -1,4 +1,4 @@
-# asleep: a sleep classifier for wearable sensor data using machine learning
+# sleeper: a sleep classifier for wearable sensor data using machine learning
 This is a Python package for classifying sleep stages from wearable sensor data / wrist - worn accelerometer. The underlying model
 was trained and tested in 1000 + nights of multi - centre polysomnography with tri - axial accelerometer data.
 
@@ -23,7 +23,7 @@ $ java -version
 
 # Installation
 ```bash
-$ pip install asleep
+$ pip install sleeper
 ```
 
 # Development checks

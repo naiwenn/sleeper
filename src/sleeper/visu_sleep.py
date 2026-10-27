@@ -15,7 +15,7 @@ import matplotlib.lines as mlines
 How to run the script:
 
 ```bash
-python src/asleep/visu_sleep.py outputs/test
+python src/sleeper/visu_sleep.py outputs/test
 
 ```
 This script will visualize the sleep prediction results from the sleepnet model.

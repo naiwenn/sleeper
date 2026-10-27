@@ -5,8 +5,8 @@ from typing import Any, Dict, List, Optional, Tuple
 import pandas as pd
 import pytest
 
-import asleep.get_sleep as get_sleep
-import asleep.utils as utils
+import sleeper.get_sleep as get_sleep
+import sleeper.utils as utils
 
 
 def test_read_uses_explicit_sample_rate_without_inference(
@@ -20,7 +20,7 @@ def test_read_uses_explicit_sample_rate_without_inference(
     )
     observed: List[int] = []
 
-    monkeypatch.setattr("asleep.utils.pd.read_pickle", lambda path: data)
+    monkeypatch.setattr("sleeper.utils.pd.read_pickle", lambda path: data)
     monkeypatch.setattr(
         utils,
         "infer_freq",
@@ -33,7 +33,7 @@ def test_read_uses_explicit_sample_rate_without_inference(
         observed.append(sample_rate)
         return frame, {}
 
-    monkeypatch.setattr("asleep.utils.actipy.process", process)
+    monkeypatch.setattr("sleeper.utils.actipy.process", process)
     monkeypatch.setattr(utils, "detect_nonwear", lambda frame: (frame, {}))
 
     _, info = utils.read(input_path, sample_rate=25)
@@ -53,7 +53,7 @@ def test_read_infers_sample_rate_when_omitted(
     )
     observed: List[int] = []
 
-    monkeypatch.setattr("asleep.utils.pd.read_pickle", lambda path: data)
+    monkeypatch.setattr("sleeper.utils.pd.read_pickle", lambda path: data)
 
     def process(
         frame: pd.DataFrame, sample_rate: int, **kwargs: Any
@@ -61,7 +61,7 @@ def test_read_infers_sample_rate_when_omitted(
         observed.append(sample_rate)
         return frame, {}
 
-    monkeypatch.setattr("asleep.utils.actipy.process", process)
+    monkeypatch.setattr("sleeper.utils.actipy.process", process)
     monkeypatch.setattr(utils, "detect_nonwear", lambda frame: (frame, {}))
 
     _, info = utils.read(input_path)

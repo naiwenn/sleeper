@@ -6,7 +6,7 @@ from typing import Any, Dict
 import pandas as pd
 import pytest
 
-import asleep.get_sleep as get_sleep
+import sleeper.get_sleep as get_sleep
 
 
 def test_get_parsed_data_writes_package_version(
@@ -28,10 +28,10 @@ def test_get_parsed_data_writes_package_version(
 
     _, info = get_sleep.get_parsed_data(raw_path, info_path, 30, args)
 
-    assert info["AsleepVersion"] == "0.4.18"
+    assert info["SleeperVersion"] == "0.4.18"
     with info_path.open(encoding="utf-8") as info_file:
         persisted_info: Dict[str, Any] = json.load(info_file)
-    assert persisted_info["AsleepVersion"] == "0.4.18"
+    assert persisted_info["SleeperVersion"] == "0.4.18"
 
 
 def test_get_parsed_data_refreshes_version_in_cached_info(
@@ -48,7 +48,7 @@ def test_get_parsed_data_refreshes_version_in_cached_info(
             "non_wear": [False],
         }
     ).to_csv(raw_path, index=False)
-    info_path.write_text('{"AsleepVersion": "old"}', encoding="utf-8")
+    info_path.write_text('{"SleeperVersion": "old"}', encoding="utf-8")
     monkeypatch.setattr(get_sleep, "version", lambda package: "0.4.18")
     monkeypatch.setattr(
         get_sleep,
@@ -61,7 +61,7 @@ def test_get_parsed_data_refreshes_version_in_cached_info(
 
     _, info = get_sleep.get_parsed_data(raw_path, info_path, 30, args)
 
-    assert info["AsleepVersion"] == "0.4.18"
+    assert info["SleeperVersion"] == "0.4.18"
     with info_path.open(encoding="utf-8") as info_file:
         persisted_info = json.load(info_file)
-    assert persisted_info["AsleepVersion"] == "0.4.18"
+    assert persisted_info["SleeperVersion"] == "0.4.18"

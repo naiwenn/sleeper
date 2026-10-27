@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from asleep.test_summary import main
+from sleeper.test_summary import main
 
 
 def test_main_round_trips_saved_timestamps(
