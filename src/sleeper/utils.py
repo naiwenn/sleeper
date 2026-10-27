@@ -566,8 +566,6 @@ def setup_transforms(augment_mode: str, is_train: bool) -> Callable[[Tensor], Te
 
 
 ##########################################################################
-#
-#                                    Non-wear detection
 #                        Taken from Actipy. Need to update if actipy changes.
 # https://github.com/OxWearables/actipy/blob/5ca689a1bca1a338712a5e8b9831eaf9e20d95d9/src/actipy/processing.py#L97
 ##########################################################################
